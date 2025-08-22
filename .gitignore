@@ -50,3 +50,10 @@ ckpts/
 
 # Subdirectories that are separate repos
 Resnet/
+
+# Images
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
