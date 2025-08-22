@@ -5,7 +5,7 @@ import torch.nn as nn
 import torch.optim as optim
 from .utils import set_seed, get_device, accuracy
 from .datasets import get_dataloaders
-from .models import MLP_MNIST, SimpleCNN_CIFAR10
+from .models import MLP_MNIST, SimpleCNN_CIFAR10, DeepCNN_CIFAR10, ResNet_CIFAR10
 import yaml
 
 
@@ -14,6 +14,10 @@ def build_model(task: str, num_classes: int):
         return MLP_MNIST(num_classes)
     elif task == "cifar10-cnn":
         return SimpleCNN_CIFAR10(num_classes)
+    elif task == "cifar10-deepcnn":
+        return DeepCNN_CIFAR10(num_classes)
+    elif task == "cifar10-resnet":
+        return ResNet_CIFAR10(num_classes)
     else:
         raise ValueError(task)
 

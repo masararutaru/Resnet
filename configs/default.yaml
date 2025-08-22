@@ -1,9 +1,9 @@
-task: mnist-mlp   # [mnist-mlp, cifar10-cnn]
+task: cifar10-resnet   # [mnist-mlp, cifar10-cnn, cifar10-deepcnn, cifar10-resnet]
 batch_size: 128
-epochs: 5
+epochs: 20
 lr: 0.001
 weight_decay: 0.0
-step_size: 0      # 0 なら scheduler 無効
+step_size: 0      # 0 なら scheduler 無効（ResNet論文当時の技術レベル）
 gamma: 0.1
 seed: 42
 num_workers: 2 
